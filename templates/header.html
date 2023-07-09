@@ -1,0 +1,16 @@
+<html>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <header class="header">
+        <a class="logo" href="{% url 'home' %}"><img src="/static/media/svg/logo.svg" alt="logo"></a>
+        <p>Subhasish</p>
+        <div class="topnav">
+            <a class="{% if request.path == "/home/" %} active {% endif %}" href="{% url 'home' %}">Home</a>
+            <a class="{% if request.path == "/photo/" %} active {% endif %}" href="{% url 'photo' %}">Photo</a>
+            <a class="{% if request.path == "/song/" %} active {% endif %}" href="{% url 'song' %}">Song</a>
+            <a class="{% if request.path == "/video/" %} active {% endif %}" href="{% url 'video' %}">Video</a>
+            <a class="{% if request.path == "/document/" %} active {% endif %}" href="{% url 'document' %}">Document</a>
+            <a class="{% if request.path == "/youtube/" %} active {% endif %}" href="{% url 'youtube' %}">Youtube</a>
+            <a class="{% if request.path == "/aboutus/" %} active {% endif %}" href="{% url 'aboutus' %}">Aboutus</a>
+        </div>
+    </header>
+</html>
